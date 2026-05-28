@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Barbearia - Desktop App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        body {
+            background-color: #121214;
+            color: #e1e1e6;
+            font-family: 'Inter', sans-serif;
+        }
+        .gradient-text {
+            background: linear-gradient(45deg, #ffb800, #ff8800);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .btn-gradient {
+            background: linear-gradient(45deg, #ffb800, #ff8800);
+            transition: transform 0.2s, filter 0.2s;
+        }
+        .btn-gradient:hover {
+            transform: translateY(-2px);
+            filter: brightness(1.1);
+        }
+        .card-dark {
+            background-color: #1a1a1e;
+            border: 1px solid #29292e;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="border-b border-[#29292e] bg-[#121214]/80 backdrop-blur-md sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-2 font-bold text-xl tracking-wide">
+                <i data-lucide="scissors" class="text-[#ffb800]"></i>
+                <span>Barber<span class="text-[#ffb800]">Sys</span></span>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#features" class="hover:text-white transition">Funcionalidades</a>
+                <a href="#screenshots" class="hover:text-white transition">Demonstração</a>
+                <a href="#tech" class="hover:text-white transition">Tecnologias</a>
+                <a href="#setup" class="hover:text-white transition">Instalação</a>
+            </div>
+            <a href="https://www.mediafire.com/file/p15wapa1d32kmxo/teste27.zip/file" class="btn-gradient text-black font-bold px-5 py-2 rounded-lg text-sm flex items-center gap-2 shadow-lg shadow-amber-500/10">
+                <i data-lucide="download" class="w-4 h-4"></i> Baixar App
+            </a>
+        </div>
+    </nav>
+
+    <header class="max-w-4xl mx-auto px-4 pt-16 pb-20 text-center relative">
+        <div class="absolute inset-0 bg-amber-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <span class="bg-amber-500/10 text-[#ffb800] text-xs font-semibold px-3 py-1 rounded-full border border-amber-500/20 uppercase tracking-wider">
+            ⚡ Aplicação Desktop Nativa
+        </span>
+        <h1 class="text-4xl md:text-6xl font-extrabold mt-6 leading-tight">
+            Gerencie sua Barbearia com uma <span class="gradient-text">Interface Moderna</span>
+        </h1>
+        <p class="text-gray-400 text-lg md:text-xl mt-6 max-w-2xl mx-auto leading-relaxed">
+            Uma aplicação desktop robusta desenvolvida em Python para controle de acessos, agendamentos e gerenciamento de serviços em tempo real.
+        </p>
+        
+        <div class="mt-10 flex flex-col sm:flex-row justify-center items-center gap-4">
+            <a href="#setup" class="btn-gradient text-black font-bold px-8 py-4 rounded-xl text-md flex items-center gap-3 w-full sm:w-auto justify-center shadow-lg shadow-amber-500/20">
+                <i data-lucide="terminal" class="w-5 h-5"></i> Começar Instalação
+            </a>
+            <a href="https://github.com/mrjackxxz/meus-projetos" target="_blank" class="card-dark hover:bg-[#222226] transition text-white font-medium px-8 py-4 rounded-xl text-md flex items-center gap-3 w-full sm:w-auto justify-center">
+                <i data-lucide="github" class="w-5 h-5"></i> Ver Código Fonte
+            </a>
+        </div>
+    </header>
+
+    <section id="features" class="max-w-6xl mx-auto px-4 py-16 border-t border-[#29292e]">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold">O que o sistema oferece?</h2>
+            <p class="text-gray-400 mt-2">Funcionalidades pensadas tanto para o cliente quanto para o administrador do negócio.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+            <div class="card-dark p-6 rounded-2xl relative overflow-hidden group">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-[#ffb800] mb-4">
+                    <i data-lucide="shield-check"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Autenticação Segura</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Sistema de login e cadastro integrado ao banco de dados com senhas criptografadas via Bcrypt.
+                </p>
+            </div>
+            <div class="card-dark p-6 rounded-2xl relative overflow-hidden group">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-[#ffb800] mb-4">
+                    <i data-lucide="users"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Níveis de Acesso</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Redirecionamento inteligente: Clientes visualizam preços; Administradores gerenciam tudo.
+                </p>
+            </div>
+            <div class="card-dark p-6 rounded-2xl relative overflow-hidden group">
+                <div class="w-12 h-12 rounded-xl bg-amber-500/10 flex items-center justify-center text-[#ffb800] mb-4">
+                    <i data-lucide="moon"></i>
+                </div>
+                <h3 class="text-xl font-bold mb-2">Interface Premium</h3>
+                <p class="text-gray-400 text-sm leading-relaxed">
+                    Visual moderno construído sobre CustomTkinter com suporte nativo a Dark Mode elegante.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="screenshots" class="max-w-6xl mx-auto px-4 py-16 border-t border-[#29292e]">
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold">Demonstração do Sistema</h2>
+            <p class="text-gray-400 mt-2">Conheça a interface e o fluxo visual das telas do aplicativo.</p>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-8">
+            <div>
+                <div class="card-dark rounded-xl overflow-hidden aspect-video flex items-center justify-center text-gray-600 border border-dashed border-gray-700 bg-[#151518]">
+                    <img src="C:\Users\Aluno\Desktop\Nova pasta (2)\imagens\imagem1.png" alt="Tela de Login" class="w-full h-full object-cover opacity-40 group-hover:opacity-100 transition">
+                </div>
+                <h4 class="font-bold mt-4 flex items-center gap-2 text-sm text-gray-200">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span> 🔐 Login e Cadastro
+                </h4>
+                <p class="text-gray-400 text-xs mt-1">Onde os usuários acessam ou criam novas contas de forma segura.</p>
+            </div>
+
+            <div>
+                <div class="card-dark rounded-xl overflow-hidden aspect-video flex items-center justify-center text-gray-600 border border-dashed border-gray-700 bg-[#151518]">
+                    <img src="C:\Users\Aluno\Desktop\Nova pasta (2)\imagens\imagem2.png" alt="Painel do Cliente" class="w-full h-full object-cover opacity-40">
+                </div>
+                <h4 class="font-bold mt-4 flex items-center gap-2 text-sm text-gray-200">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span> 👥 Painel do Cliente
+                </h4>
+                <p class="text-gray-400 text-xs mt-1">Visualização limpa e direta da tabela de preços e serviços oferecidos.</p>
+            </div>
+
+            <div>
+                <div class="card-dark rounded-xl overflow-hidden aspect-video flex items-center justify-center text-gray-600 border border-dashed border-gray-700 bg-[#151518]">
+                    <img src="C:\Users\Aluno\Desktop\Nova pasta (2)\imagens\imagem3.png" alt="Painel Adm" class="w-full h-full object-cover opacity-40">
+                </div>
+                <h4 class="font-bold mt-4 flex items-center gap-2 text-sm text-gray-200">
+                    <span class="w-2 h-2 rounded-full bg-amber-500"></span> ⚙️ Painel do Administrador
+                </h4>
+                <p class="text-gray-400 text-xs mt-1">Área exclusiva para inserção, monitoramento e atualização de serviços.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="tech" class="bg-[#16161a] py-16 border-t border-b border-[#29292e]">
+        <div class="max-w-6xl mx-auto px-4">
+            <h3 class="text-center text-sm font-semibold tracking-wider text-gray-400 uppercase mb-8">Tecnologias Utilizadas no Core do Projeto</h3>
+            <div class="flex flex-wrap justify-center items-center gap-8 md:gap-12 text-gray-400">
+                <span class="flex items-center gap-2 font-medium hover:text-white transition"><i data-lucide="code" class="text-amber-500"></i> Python 3.x</span>
+                <span class="flex items-center gap-2 font-medium hover:text-white transition"><i data-lucide="layout" class="text-amber-500"></i> CustomTkinter</span>
+                <span class="flex items-center gap-2 font-medium hover:text-white transition"><i data-lucide="database" class="text-amber-500"></i> PostgreSQL</span>
+                <span class="flex items-center gap-2 font-medium hover:text-white transition"><i data-lucide="lock" class="text-amber-500"></i> Bcrypt Hashing</span>
+                <span class="flex items-center gap-2 font-medium hover:text-white transition"><i data-lucide="sliders" class="text-amber-500"></i> Python-dotenv</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="setup" class="max-w-4xl mx-auto px-4 py-16">
+        <div class="text-center mb-12">
+            <h2 class="text-3xl font-bold">Como Configurar e Executar</h2>
+            <p class="text-gray-400 mt-2">Siga o passo a passo abaixo para rodar a aplicação localmente.</p>
+        </div>
+
+        <div class="space-y-8">
+            <div class="card-dark p-6 rounded-xl flex items-start gap-4">
+                <div class="p-3 bg-amber-500/10 rounded-lg text-[#ffb800] shrink-0">
+                    <i data-lucide="info"></i>
+                </div>
+                <div>
+                    <h4 class="font-bold text-lg">Pré-requisitos</h4>
+                    <p class="text-gray-400 text-sm mt-1">Certifique-se de ter o Python 3.x instalado e uma instância do PostgreSQL ativa (local ou em nuvem).</p>
+                </div>
+            </div>
+
+            <div class="relative pl-8 border-l-2 border-[#29292e] space-y-8 ml-4">
+                <div class="relative">
+                    <span class="absolute -left-[41px] top-0 w-6 h-6 bg-amber-500 text-black rounded-full flex items-center justify-center text-xs font-bold">1</span>
+                    <h4 class="font-bold text-md text-gray-200">Clonar o Repositório</h4>
+                    <pre class="bg-black/50 border border-[#29292e] p-3 rounded-lg text-sm text-amber-400 overflow-x-auto mt-2"><code>git clone https://github.com/mrjackxxz/meus-projetos</code></pre>
+                </div>
+
+                <div class="relative">
+                    <span class="absolute -left-[41px] top-0 w-6 h-6 bg-amber-500 text-black rounded-full flex items-center justify-center text-xs font-bold">2</span>
+                    <h4 class="font-bold text-md text-gray-200">Instalar as Dependências</h4>
+                    <pre class="bg-black/50 border border-[#29292e] p-3 rounded-lg text-sm text-amber-400 overflow-x-auto mt-2"><code>pip install customtkinter psycopg2-binary bcrypt python-dotenv</code></pre>
+                </div>
+
+                <div class="relative">
+                    <span class="absolute -left-[41px] top-0 w-6 h-6 bg-amber-500 text-black rounded-full flex items-center justify-center text-xs font-bold">3</span>
+                    <h4 class="font-bold text-md text-gray-200">Variáveis de Ambiente (`.env`)</h4>
+                    <p class="text-sm text-gray-400 mt-1">Crie um arquivo chamado <code>.env</code> na raiz do projeto e insira suas credenciais:</p>
+                    <pre class="bg-black/50 border border-[#29292e] p-3 rounded-lg text-sm text-gray-300 overflow-x-auto mt-2"><code>DB_HOST=seu_host_aqui&#10;DB_USER=seu_usuario_aqui&#10;DB_PASS=sua_senha_aqui&#10;DB_NAME=seu_nome_do_banco_aqui&#10;DB_PORT=5432</code></pre>
+                </div>
+
+                <div class="relative">
+                    <span class="absolute -left-[41px] top-0 w-6 h-6 bg-amber-500 text-black rounded-full flex items-center justify-center text-xs font-bold">4</span>
+                    <h4 class="font-bold text-md text-gray-200">Executar o Aplicativo</h4>
+                    <pre class="bg-black/50 border border-[#29292e] p-3 rounded-lg text-sm text-green-400 overflow-x-auto mt-2"><code>python main.py</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-[#29292e] bg-[#0d0d0f] py-8 text-center text-sm text-gray-500">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <p>&copy; 2026 BarberSys. Desenvolvido com Python & CustomTkinter.</p>
+            <div class="flex gap-4 text-xs">
+                <a href="https://github.com/seu-usuario" target="_blank" class="hover:text-white transition">GitHub</a>
+                <a href="#" class="hover:text-white transition">Suporte</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html>
